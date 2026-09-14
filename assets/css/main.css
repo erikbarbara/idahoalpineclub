@@ -27,13 +27,13 @@ a { color: var(--forest); }
 
 .navbar { min-height: 84px; }
 .navbar > .container { position: relative; }
-.navbar-brand { height: 62px; position: relative; width: 86px; }
+.navbar-brand { height: 62px; position: relative; width: 112px; }
 .club-logo {
   background: #fff;
   border: 1px solid #d5dbd7;
   border-radius: .3rem;
   box-shadow: 0 .35rem .9rem rgba(0, 0, 0, .16);
-  height: 108px;
+  height: 146px;
   left: 0;
   object-fit: contain;
   padding: 4px;
@@ -111,13 +111,13 @@ a { color: var(--forest); }
 .payment-placeholder { font-size: .78rem; margin: .5rem 0 0; }
 
 .site-footer { background: #06170f; color: #fff; }
-.footer-logo { display: inline-block; height: 110px; position: relative; width: 86px; }
-.footer-logo .club-logo { border: 0; box-shadow: none; height: 110px; left: 0; position: absolute; top: 0; }
+.footer-logo { display: inline-block; height: 135px; position: relative; width: 105px; }
+.footer-logo .club-logo { border: 0; box-shadow: none; height: 135px; left: 0; position: absolute; top: 0; }
 
 @media (max-width: 767.98px) {
   .navbar { min-height: 76px; }
-  .navbar-brand { height: 54px; width: 70px; }
-  .navbar-brand .club-logo { height: 92px; }
+  .navbar-brand { height: 54px; width: 78px; }
+  .navbar-brand .club-logo { height: 112px; }
   .desktop-nav { display: none; }
   .mobile-menu { display: block; }
   .home-hero { min-height: 600px; }
