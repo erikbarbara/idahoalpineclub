@@ -122,8 +122,7 @@ a { color: var(--forest); }
   .mobile-menu { display: block; }
   .home-hero { min-height: 600px; }
   .hero-content { padding-bottom: 5rem !important; padding-top: 9rem !important; }
-  .meta-item { border-bottom: 1px solid #e1e5e2; min-height: 105px; padding: 1.1rem; }
-  .meta-item:nth-child(2) { border-right: 0; }
+  .meta-item { border: 1px solid #e1e5e2; min-height: 105px; padding: 1.1rem; }
   .section-heading { align-items: start; flex-direction: column; gap: .5rem; }
   .document-list article { grid-template-columns: 48px 1fr; }
   .membership-panel { grid-template-columns: 1fr; }
