@@ -1,49 +1,59 @@
 ---
 layout: default
-title: Home
+title: Idaho Alpine Club
+description: A volunteer-run outdoor community exploring Idaho and the Mountain West.
 slug: home
 permalink: /
 ---
+
 <section class="home-hero">
-  <div class="container hero-content py-5"><div class="row"><div class="col-xl-10">
+  <div class="container hero-content py-5"><div class="col-xl-9">
     <p class="eyebrow">Est. in Idaho Falls</p>
-    <h1 class="display-2">Explore Idaho’s Wild Places With a Community That Loves the Outdoors</h1>
-    <p class="lead col-lg-9">Join Idaho Alpine Club for hiking, backpacking, climbing, skiing, paddling, conservation, and year-round outdoor adventures.</p>
-    <div class="d-flex flex-wrap gap-3 mt-4"><a class="btn btn-gold btn-lg" href="{{ '/membership-form/' | relative_url }}">Join the Club</a><a class="btn btn-outline-light btn-lg" href="{{ '/#activities' | relative_url }}">Explore Activities</a></div>
-  </div></div></div>
-</section>
-
-<section class="quick-links border-bottom" aria-label="Club highlights"><div class="container"><div class="row g-0">
-  <a class="col-6 col-lg-3 quick-link" href="{{ '/about-us/' | relative_url }}"><strong>Volunteer-Run</strong><span>Learn about the club</span></a>
-  <a class="col-6 col-lg-3 quick-link" href="{{ '/about-us/' | relative_url }}"><strong>Idaho Outdoor Community</strong><span>Meet your community</span></a>
-  <a class="col-6 col-lg-3 quick-link" href="{{ '/events/' | relative_url }}"><strong>Year-Round Adventures</strong><span>See upcoming events</span></a>
-  <a class="col-6 col-lg-3 quick-link" href="{{ '/membership-form/' | relative_url }}"><strong>From $25/year</strong><span>Become a member</span></a>
-</div></div></section>
-
-<section class="py-5 my-lg-5">
-  <div class="container py-4"><div class="row g-5 align-items-center">
-    <div class="col-lg-6"><img class="img-fluid rounded club-photo" src="{{ '/assets/images/club-landscape.png' | relative_url }}" alt="Idaho Alpine Club members outdoors"></div>
-    <div class="col-lg-6"><p class="eyebrow">About the Club</p><h2>Built by outdoor lovers, for outdoor lovers</h2><p>Idaho Alpine Club brings together people who love hiking, climbing, backpacking, paddling, skiing, conservation, and exploring Idaho’s outdoor spaces. Every trip and stewardship day is organized by members.</p>
-      <ul class="check-list"><li>Year-round trips for all skill levels</li><li>Mentorship from experienced members</li><li>Conservation and trail maintenance days</li><li>A friendly community based in Idaho Falls</li></ul>
-      <a class="btn btn-outline-club" href="{{ '/about-us/' | relative_url }}">Read our story</a>
-    </div>
+    <h1 class="display-2">Find wild places.<br>Go together.</h1>
+    <p class="lead col-lg-9">Hiking, paddling, skiing, climbing, conservation, and good company across Idaho and the Mountain West.</p>
+    <div class="d-flex flex-wrap gap-3 mt-4"><a class="btn btn-gold btn-lg" href="#events">See events &amp; updates</a><a class="btn btn-outline-light btn-lg" href="#join">Join the club</a></div>
   </div></div>
 </section>
 
-<section class="py-5 bg-body-tertiary scroll-target" id="activities">
-  <div class="container py-5"><div class="row align-items-end mb-4"><div class="col-lg-8"><p class="eyebrow">Activities</p><h2>Find your way outside</h2></div><p class="col-lg-4 text-secondary">Trips span seasons and experience levels. Members receive the details before each event.</p></div>
-    <div class="row g-3">
-      {% assign activities = "🥾|Day Hiking|Scenic day hikes for a range of abilities.,🎿|Cross-Country Skiing|Winter trail outings with fellow members.,❄️|Snowshoeing|Guided outings through snowy landscapes.,🚴|Bicycling|Social rides on regional outdoor routes.,🛶|Kayaking|Paddling trips and water-based adventures.,🛠️|Trail Maintenance|Hands-on work caring for local trails.,🌿|Conservation|Projects protecting Idaho’s outdoor spaces." | split: "," %}
-      {% for activity in activities %}{% assign item = activity | split: "|" %}<div class="col-md-6 col-lg-4"><article class="card activity-card h-100"><div class="card-body"><span class="activity-icon">{{ item[0] }}</span><h3 class="h5 card-title mt-3">{{ item[1] }}</h3><p class="card-text text-secondary">{{ item[2] }}</p></div></article></div>{% endfor %}
-    </div>
-  </div>
-</section>
+<section class="club-meta border-bottom" aria-label="Club information"><div class="container"><div class="row g-0">
+  <div class="col-6 col-lg-3 meta-item"><strong>Volunteer-led</strong><span>Member organized</span></div>
+  <div class="col-6 col-lg-3 meta-item"><strong>Year-round</strong><span>All seasons</span></div>
+  <div class="col-6 col-lg-3 meta-item"><strong>All experience levels</strong><span>Everyone is welcome</span></div>
+  <div class="col-6 col-lg-3 meta-item"><strong>$25 / $30</strong><span>Individual / household</span></div>
+</div></div></section>
 
-<section class="py-5"><div class="container py-5"><div class="text-center mx-auto section-intro"><p class="eyebrow">Membership</p><h2>Simple, affordable, all year long</h2><p class="text-secondary">Both tiers include every Club activity, event notices, and volunteer opportunities.</p></div>
-  <div class="row g-4 justify-content-center mt-4">
-    <div class="col-md-6 col-lg-5"><article class="card price-card h-100"><div class="card-body p-4 p-lg-5"><h3 class="h4">Single Membership</h3><p><strong class="display-4">$25</strong> / year</p><p class="text-secondary">For one individual member.</p><ul class="check-list"><li>Access to all Club trips</li><li>Newsletter and event invites</li><li>Conservation and trail days</li></ul></div></article></div>
-    <div class="col-md-6 col-lg-5"><article class="card price-card featured h-100"><div class="card-body p-4 p-lg-5"><span class="badge text-bg-warning mb-3">Best value</span><h3 class="h4">Household / Family</h3><p><strong class="display-4">$30</strong> / year</p><p class="text-secondary">Covers everyone in your household.</p><ul class="check-list"><li>Access to all Club trips</li><li>Newsletter and event invites</li><li>Conservation and trail days</li></ul></div></article></div>
-  </div><div class="text-center mt-4"><a class="btn btn-club btn-lg" href="{{ '/membership-form/' | relative_url }}">Start Membership Form</a><p class="small text-secondary mt-2">Membership requires a completed release agreement.</p></div>
-</div>
-</section>
-{% include cta.html %}
+<section class="content-section" id="about"><div class="container"><div class="row g-5 align-items-center">
+  <div class="col-lg-6"><img class="img-fluid rounded-1 club-photo" src="{{ '/assets/images/club-landscape.png' | relative_url }}" alt="Idaho Alpine Club members outdoors"></div>
+  <div class="col-lg-6"><p class="eyebrow">Outside, together</p><h2>A community built on shared trailheads</h2><p class="lead-copy">Idaho Alpine Club is a nonprofit, volunteer-run club based in Idaho Falls. Members lead every outing—from approachable day hikes to backcountry adventures—and care for the places we explore.</p>
+    <div class="activity-list" aria-label="Club activities"><span>Day hiking</span><span>Backpacking</span><span>Paddling</span><span>Climbing</span><span>Cross-country skiing</span><span>Snowshoeing</span><span>Conservation</span><span>Trail work</span></div>
+  </div>
+</div></div></section>
+
+<section class="content-section bg-body-tertiary" id="events"><div class="container">
+  <div class="section-heading"><div><p class="eyebrow">Get outside</p><h2>Events &amp; club updates</h2></div><p>Members receive final trip details by email. Questions? <a href="mailto:{{ club_email | strip }}">Contact the club.</a></p></div>
+  <div class="row g-4 mt-2">
+    {% assign events = site.data.events | sort: "date" | reverse %}
+    {% for event in events %}<div class="col-md-6"><article class="card h-100 event-listing">
+      <div class="card-body p-4"><p class="eyebrow mb-2">{% if event.label %}{{ event.label }}{% else %}{{ event.date | date: "%B %-d, %Y" }}{% endif %}</p><h3 class="h4">{{ event.title }}</h3><p class="text-secondary">{{ event.description }}</p></div>
+      {% if event.contact %}<div class="card-footer bg-transparent border-0 px-4 pb-4"><a class="btn btn-outline-club" href="mailto:{{ club_email | strip }}">{{ event.link_text | default: "Contact the club" }}</a></div>{% elsif event.link %}<div class="card-footer bg-transparent border-0 px-4 pb-4"><a class="btn btn-outline-club" href="{{ event.link }}">{{ event.link_text | default: "Learn more" }}</a></div>{% endif %}
+    </article></div>{% endfor %}
+  </div>
+</div></section>
+
+<section class="content-section" id="board-notes"><div class="container">
+  <div class="section-heading"><div><p class="eyebrow">Club business</p><h2>Recent board notes</h2></div><p>Meeting records are published newest first.</p></div>
+  <div class="document-list mt-4">
+    {% assign notes = site.data.board_notes | sort: "date" | reverse %}
+    {% for note in notes limit: 5 %}<article><div class="doc-icon">{{ note.format | default: "PDF" }}</div><div><h3 class="h5">{{ note.title }}</h3><p>{{ note.date | date: "%B %-d, %Y" }}</p></div><a class="btn btn-outline-club" href="{{ note.document | relative_url }}" download>Download</a></article>{% endfor %}
+  </div>
+</div></section>
+
+<section class="membership-section" id="join"><div class="container"><div class="membership-panel">
+  <div class="membership-copy"><p class="eyebrow">Join the club</p><h2>One year. Every adventure.</h2><p>Annual dues support Club operations, insurance, conservation, and trail stewardship.</p><div class="dues"><span><strong>$25</strong> individual</span><span><strong>$30</strong> household</span></div></div>
+  <div class="membership-actions">
+    <a class="btn btn-gold btn-lg" href="{{ site.membership_form_url }}">Complete the online form <span aria-hidden="true">↗</span></a>
+    <a class="btn btn-outline-light" href="{{ '/assets/documents/membership-form.pdf' | relative_url }}" download>Download printable PDF</a>
+    <a class="btn btn-light" href="{{ site.paypal_url }}">Pay annual dues with PayPal <span aria-hidden="true">↗</span></a>
+    <p class="payment-placeholder">Pay dues securely online with PayPal, or contact the Club to arrange payment by check or cash.</p>
+  </div>
+</div></div></section>

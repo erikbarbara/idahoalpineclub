@@ -1,6 +1,6 @@
 # Idaho Alpine Club — Jekyll site
 
-A lightweight Jekyll and Bootstrap site for the Idaho Alpine Club. GitHub
+A lightweight single-page Jekyll and Bootstrap site for the Idaho Alpine Club. GitHub
 Actions builds and deploys it to
 <https://erikbarbara.github.io/idahoalpineclub/> whenever `main` changes.
 
@@ -18,15 +18,41 @@ and all styles are in `assets/css/main.css`.
 
 ## Publish an event
 
-Copy one of the Markdown files in `_events/`, update its front matter and body,
-then commit it. An image is optional; place images in `assets/images/`. The
-Events page sorts entries newest first automatically.
+Edit `_data/events.yml`. Each list item is one event or update. The events
+section sorts entries newest first automatically.
+
+```yaml
+- title: Big Elk Creek Hike
+  date: 2026-10-12
+  label: Sunday, October 12
+  description: Meet at 8:00 AM. Members receive route details by email.
+  contact: true
+  link_text: Join this hike
+```
+
+Add a new item, edit an existing item, or remove an item from the list. Use
+`contact: true` for a button that emails the Club, or replace it with `link:`
+and a complete external URL.
 
 ## Publish board notes
 
-Place the PDF or DOCX in `assets/documents/`, then copy an entry in
-`_board_notes/` and update its title, date, format, and document path. Commit
-both files and the Board Meeting Notes page regenerates automatically.
+Place the PDF or DOCX in `assets/documents/`, then add one list item to
+`_data/board_notes.yml` with its title, date, format, and document path. Commit
+both changes and the board notes section regenerates automatically.
+
+```yaml
+- title: IAC Board Meeting Notes
+  date: 2026-10-14
+  format: PDF
+  document: /assets/documents/board-notes-2026-10-14.pdf
+```
+
+The newest five records are displayed automatically.
+
+## Membership links
+
+The external form and PayPal destinations live in `_config.yml`. The PayPal
+button only appears when `paypal_url` contains a verified payment URL.
 
 ## Deployment
 
