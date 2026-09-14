@@ -1,0 +1,163 @@
+:root {
+  --club-green: #153d2b;
+  --club-green-dark: #0b2418;
+  --club-gold: #d7a847;
+  --club-cream: #f5f1e8;
+}
+
+html { scroll-padding-top: 90px; }
+body { color: #1d2921; font-family: "Mulish", sans-serif; }
+h1, h2, h3 { font-family: "Cinzel", serif; }
+h2 { font-size: clamp(2rem, 4vw, 3.25rem); }
+a { color: var(--club-green); }
+.shell { margin-inline: auto; max-width: 1140px; padding-inline: 1.5rem; width: 100%; }
+
+.eyebrow {
+  color: #9b6c14;
+  font-size: .75rem;
+  font-weight: 800;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+}
+
+.btn-club, .btn-gold, .btn-outline-club { border-radius: .25rem; font-weight: 700; }
+.btn-club { background: var(--club-green); color: #fff; }
+.btn-club:hover { background: var(--club-green-dark); color: #fff; }
+.btn-gold { background: var(--club-gold); color: #172018; }
+.btn-gold:hover { background: #e1b85e; color: #172018; }
+.btn-outline-club { border-color: var(--club-green); color: var(--club-green); }
+.btn-outline-club:hover { background: var(--club-green); color: #fff; }
+
+.site-logo { align-items: center; display: inline-flex; }
+.club-logo {
+  background: #fff;
+  border: 1px solid #d9ddd9;
+  border-radius: .35rem;
+  height: 146px;
+  object-fit: contain;
+  padding: 4px;
+  width: auto;
+}
+.navbar > .container { position: relative; }
+.navbar-brand { height: 66px; position: relative; width: 112px; }
+.navbar-brand .club-logo {
+  box-shadow: 0 .35rem .8rem rgba(0, 0, 0, .16);
+  left: 0;
+  position: absolute;
+  top: -.35rem;
+  z-index: 2;
+}
+.footer-logo .club-logo { border-color: transparent; height: 150px; position: static; width: auto; }
+.navbar .nav-link { color: #34433a; font-size: .9rem; font-weight: 600; }
+.navbar .nav-link.active, .navbar .nav-link:hover { color: var(--club-green); }
+
+.home-hero, .page-hero, .cta-band { background-position: center; background-size: cover; color: #fff; }
+.home-hero {
+  align-items: center;
+  background-image: linear-gradient(90deg, rgba(7, 28, 18, .9), rgba(7, 28, 18, .35)), url("../images/hero-mountains.jpg");
+  display: flex;
+  min-height: 650px;
+}
+.home-hero .hero-content { padding-bottom: 7rem !important; padding-top: 7rem !important; }
+.home-hero h1 { font-weight: 600; max-width: 1050px; }
+.home-hero .lead { color: #e2e9e4; }
+.home-hero .eyebrow, .cta-band .eyebrow { color: #eccb7f; }
+
+.quick-links { background: #fff; }
+.quick-link {
+  border-right: 1px solid #dee2e6;
+  color: #26332b;
+  display: flex;
+  flex-direction: column;
+  min-height: 115px;
+  padding: 1.5rem;
+  transition: background-color .15s;
+}
+.quick-link:hover { background: var(--club-cream); color: var(--club-green); }
+.quick-link strong { font-family: "Cinzel", serif; }
+.quick-link span { color: #6c757d; font-size: .8rem; margin-top: .3rem; }
+.club-photo { aspect-ratio: 3 / 2; object-fit: cover; width: 100%; }
+.check-list { list-style: none; padding-left: 0; }
+.check-list li { margin-bottom: .55rem; padding-left: 1.65rem; position: relative; }
+.check-list li::before { color: #a4771f; content: "✓"; font-weight: 800; left: 0; position: absolute; }
+.activity-card { border-color: #dee2d9; transition: border-color .15s, transform .15s; }
+.activity-card:hover { border-color: #a9b4ac; transform: translateY(-2px); }
+.activity-icon { font-size: 1.75rem; }
+.section-intro { max-width: 760px; }
+.price-card.featured { border-color: var(--club-gold); border-top-width: 4px; }
+
+.page-hero {
+  background-image: linear-gradient(90deg, rgba(7, 28, 18, .94), rgba(7, 28, 18, .6)), url("../images/hero-mountains.jpg");
+}
+.page-hero h1 { font-weight: 600; }
+.page-hero .breadcrumb a { color: #f0ca72; }
+.cta-band {
+  background-image: linear-gradient(90deg, rgba(11, 45, 29, .96), rgba(11, 45, 29, .83)), url("../images/hero-mountains.jpg");
+}
+.cta-band p:not(.eyebrow) { color: #d2ddd6; }
+
+.story-section, .events-list, .archive-section, .form-section { padding: 5rem 0; }
+.story-intro { align-items: end; display: grid; gap: 4rem; grid-template-columns: 1fr 1fr; }
+.values-grid { display: grid; grid-template-columns: repeat(2, 1fr); margin-top: 4rem; }
+.values-grid article { border: 1px solid #dee2e0; margin: -1px 0 0 -1px; padding: 2.5rem; }
+.values-grid article > span { color: #b48224; font-family: "Cinzel", serif; font-size: 1.6rem; }
+.values-grid h3 { margin-top: 1rem; }
+.values-grid p, .story-intro > p { color: #657068; }
+
+.event-card { background: #fff; border: 1px solid #e2e4e2; display: grid; grid-template-columns: 1fr 1fr; margin-bottom: 2rem; min-height: 360px; }
+.event-card > div:last-child { align-self: center; padding: 3rem; }
+.event-card.reverse .event-image { order: 2; }
+.event-image { background-position: center; background-size: cover; }
+.event-hike { background-image: url("../images/big-elk-creek.jpg"); }
+.event-volunteer { background-image: url("../images/volunteer-group.jpg"); }
+.event-listing-image { height: 280px; object-fit: cover; }
+.arrow-link { font-weight: 700; text-decoration: underline; text-underline-offset: .3rem; }
+.notice-card, .discount-card { border: 1px solid #dee2e0; margin-top: 2rem; padding: 3rem; }
+.notice-card { text-align: center; }
+.discount-card { background: var(--club-green); color: #fff; }
+.discount-card > div { display: grid; grid-template-columns: 1fr 1fr; }
+
+.archive-section .section-heading { display: flex; gap: 4rem; justify-content: space-between; }
+.archive-section .section-heading p { max-width: 480px; }
+.document-list { border-top: 1px solid #dee2e0; }
+.document-list article { align-items: center; border-bottom: 1px solid #dee2e0; display: grid; gap: 1.5rem; grid-template-columns: 60px 1fr auto; padding: 1.5rem .5rem; }
+.document-list h3, .document-list p { margin: 0; }
+.doc-icon { background: var(--club-green); color: #fff; font-size: .65rem; font-weight: 800; padding: 1rem .5rem; text-align: center; }
+.button { border: 1px solid #adb5bd; border-radius: .25rem; padding: .6rem 1rem; text-decoration: none; }
+
+.form-shell { max-width: 960px; }
+.form-heading { margin: auto; max-width: 700px; text-align: center; }
+.google-form-wrap { border: 1px solid #dee2e0; border-radius: .5rem; margin-top: 3rem; overflow: hidden; }
+.google-form-wrap iframe { border: 0; display: block; height: 1700px; width: 100%; }
+.form-fallback { color: #6c757d; margin-top: 1rem; text-align: center; }
+.pdf-card { align-items: center; background: var(--club-cream); display: flex; gap: 2rem; justify-content: space-between; margin-top: 4rem; padding: 2.5rem; }
+.pdf-card div { max-width: 650px; }
+
+.site-footer { background: var(--club-green-dark); color: #fff; }
+.footer-links li { margin-bottom: .35rem; }
+.footer-links a { color: rgba(255, 255, 255, .6); text-decoration: none; }
+.footer-links a:hover { color: #fff; }
+
+@media (max-width: 991.98px) {
+  .navbar .btn-club { margin-top: .5rem; }
+  .story-intro { gap: 1rem; grid-template-columns: 1fr; }
+  .quick-link:nth-child(2) { border-right: 0; }
+}
+
+@media (max-width: 767.98px) {
+  .navbar-brand { height: 58px; width: 84px; }
+  .navbar-brand .club-logo { height: 116px; }
+  .home-hero { min-height: 560px; }
+  .home-hero .display-2 { font-size: 2.5rem; }
+  .quick-link { min-height: 125px; padding: 1.2rem; }
+  .values-grid, .event-card { grid-template-columns: 1fr; }
+  .event-card .event-image { min-height: 250px; }
+  .event-card.reverse .event-image { order: 0; }
+  .event-card > div:last-child { padding: 2rem; }
+  .discount-card > div { grid-template-columns: 1fr; }
+  .archive-section .section-heading, .pdf-card { align-items: flex-start; flex-direction: column; }
+  .document-list article { grid-template-columns: 50px 1fr; }
+  .document-list .button { grid-column: 1 / -1; text-align: center; }
+  .google-form-wrap iframe { height: 1900px; }
+  .event-listing-image { height: 220px; }
+}

@@ -1,0 +1,17 @@
+title: Idaho Alpine Club
+description: A volunteer-run outdoor community based in Idaho Falls.
+url: "https://erikbarbara.github.io"
+baseurl: "/idahoalpineclub"
+email: info@idahoalpineclub.org
+permalink: pretty
+markdown: kramdown
+collections:
+  events:
+    output: false
+  board_notes:
+    output: false
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor

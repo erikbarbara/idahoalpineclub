@@ -1,0 +1,19 @@
+---
+layout: default
+title: Board Meeting Notes
+eyebrow: Board Meetings
+slug: board
+permalink: /board-meeting-notes/
+---
+{% include page-hero.html %}
+<section class="section archive-section"><div class="shell"><p class="eyebrow">Board Archives</p><div class="section-heading"><h2>Board Meeting Notes</h2><p>Browse and download official board meeting notes and records. Stay informed with the latest updates, decisions, and discussions.</p></div>
+  <div class="document-list">
+    {% assign notes = site.board_notes | sort: "date" | reverse %}
+    {% for note in notes %}<article>
+      <div class="doc-icon">{{ note.format | default: "PDF" }}</div>
+      <div><h3>{{ note.title }}</h3><p>{{ note.date | date: "%B %-d, %Y" }}</p></div>
+      <a class="button" href="{{ note.document | relative_url }}" download>Download ↓</a>
+    </article>{% endfor %}
+  </div>
+</div></section>
+{% include cta.html %}
