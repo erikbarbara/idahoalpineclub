@@ -44,7 +44,7 @@ permalink: /
   <div class="section-heading"><div><p class="eyebrow">Club business</p><h2>Recent board notes</h2></div><p>Meeting records are published newest first.</p></div>
   <div class="document-list mt-4">
     {% assign notes = site.data.board_notes | sort: "date" | reverse %}
-    {% for note in notes limit: 5 %}<article><a class="doc-icon" href="{{ note.document | relative_url }}" download aria-label="Download {{ note.title }}">{{ note.format | default: "PDF" }}</a><div><h3 class="h5">{{ note.title }}</h3><p>{{ note.date | date: "%B %-d, %Y" }}</p></div></article>{% endfor %}
+    {% for note in notes limit: 5 %}<article><a class="doc-icon" href="{{ note.document | relative_url }}" download aria-label="Download {{ note.title }}">{{ note.format | default: "PDF" }}</a><a class="document-details" href="{{ note.document | relative_url }}" download><h3 class="h5">{{ note.title }}</h3><p>{{ note.date | date: "%B %-d, %Y" }}</p></a></article>{% endfor %}
   </div>
 </div></section>
 

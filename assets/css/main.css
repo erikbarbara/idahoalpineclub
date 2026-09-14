@@ -91,6 +91,8 @@ a { color: var(--forest); }
 .document-list article { align-items: center; border-bottom: 1px solid #dfe3e0; display: grid; gap: 1.5rem; grid-template-columns: 58px 1fr; padding: 1.1rem .5rem; }
 .document-list h3, .document-list p { margin: 0; }
 .document-list p { color: #758078; font-size: .82rem; }
+.document-details { color: inherit; text-decoration: none; }
+.document-details:hover h3 { color: var(--forest); text-decoration: underline; text-underline-offset: .25rem; }
 .doc-icon { background: var(--forest); color: #fff; font-size: .62rem; font-weight: 800; padding: 1rem .4rem; text-align: center; text-decoration: none; }
 .doc-icon:hover { background: #1d5039; color: #fff; }
 
