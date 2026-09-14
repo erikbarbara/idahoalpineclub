@@ -70,9 +70,10 @@ a { color: var(--forest); }
 .home-hero .eyebrow { color: #edca7c; }
 
 .club-meta { background: #fff; }
-.meta-item { border-right: 1px solid #e1e5e2; display: flex; flex-direction: column; min-height: 110px; padding: 1.5rem; }
-.meta-item strong { font-family: "Cinzel", serif; }
-.meta-item span { color: #6d766f; font-size: .78rem; margin-top: .25rem; }
+.club-meta .row { border-left: 1px solid #e1e5e2; border-top: 1px solid #e1e5e2; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.meta-item { border-bottom: 1px solid #e1e5e2; border-right: 1px solid #e1e5e2; display: flex; flex-direction: column; min-height: 110px; padding: 1.5rem; width: auto; }
+.meta-item strong { font-family: "Cinzel", serif; font-size: 1.08rem; }
+.meta-item span { color: #6d766f; font-size: .86rem; margin-top: .25rem; }
 
 .content-section { padding: clamp(5rem, 9vw, 8rem) 0; }
 .club-photo { aspect-ratio: 4 / 3; object-fit: cover; width: 100%; }
@@ -116,6 +117,10 @@ a { color: var(--forest); }
 .footer-logo { display: inline-block; height: 135px; position: relative; width: 105px; }
 .footer-logo .club-logo { border: 0; box-shadow: none; height: 135px; left: 0; position: absolute; top: 0; }
 
+@media (max-width: 991.98px) {
+  .club-meta .row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
 @media (max-width: 767.98px) {
   .navbar { min-height: 76px; }
   .navbar-brand { height: 54px; width: 78px; }
@@ -124,7 +129,7 @@ a { color: var(--forest); }
   .mobile-menu { display: block; }
   .home-hero { min-height: 600px; }
   .hero-content { padding-bottom: 5rem !important; padding-top: 9rem !important; }
-  .meta-item { border: 1px solid #e1e5e2; min-height: 105px; padding: 1.1rem; }
+  .meta-item { min-height: 105px; padding: 1.1rem; }
   .section-heading { align-items: start; flex-direction: column; gap: .5rem; }
   .document-list article { grid-template-columns: 48px 1fr; }
   .membership-panel { grid-template-columns: 1fr; }
