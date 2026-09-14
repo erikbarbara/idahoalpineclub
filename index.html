@@ -30,12 +30,12 @@ permalink: /
 </div></div></section>
 
 <section class="content-section bg-body-tertiary" id="events"><div class="container">
-  <div class="section-heading"><div><p class="eyebrow">Get outside</p><h2>Events &amp; club updates</h2></div><p>Members receive final trip details by email. Questions? <a href="mailto:{{ club_email | strip }}">Contact the club.</a></p></div>
+  <div class="section-heading"><div><p class="eyebrow">Get outside</p><h2>Events &amp; club updates</h2></div><p>Members receive final trip details by email. Questions? <a href="mailto:{{ site.contact_user }}@{{ site.contact_domain }}">Contact the club.</a></p></div>
   <div class="row g-4 mt-2">
     {% assign events = site.data.events | sort: "date" | reverse %}
     {% for event in events %}<div class="col-md-6"><article class="card h-100 event-listing">
       <div class="card-body p-4"><p class="eyebrow mb-2">{% if event.label %}{{ event.label }}{% else %}{{ event.date | date: "%B %-d, %Y" }}{% endif %}</p><h3 class="h4">{{ event.title }}</h3><p class="text-secondary">{{ event.description }}</p></div>
-      {% if event.contact %}<div class="card-footer bg-transparent border-0 px-4 pb-4"><a class="btn btn-outline-club" href="mailto:{{ club_email | strip }}">{{ event.link_text | default: "Contact the club" }}</a></div>{% elsif event.link %}<div class="card-footer bg-transparent border-0 px-4 pb-4"><a class="btn btn-outline-club" href="{{ event.link }}">{{ event.link_text | default: "Learn more" }}</a></div>{% endif %}
+      <div class="card-footer bg-transparent border-0 px-4 pb-4">{% if event.link %}<a class="btn btn-outline-club" href="{{ event.link }}">{{ event.link_text | default: "Learn more" }}</a>{% else %}<a class="btn btn-outline-club" href="mailto:{{ site.contact_user }}@{{ site.contact_domain }}">{{ event.link_text | default: "Contact the club" }}</a>{% endif %}</div>
     </article></div>{% endfor %}
   </div>
 </div></section>
@@ -44,7 +44,7 @@ permalink: /
   <div class="section-heading"><div><p class="eyebrow">Club business</p><h2>Recent board notes</h2></div><p>Meeting records are published newest first.</p></div>
   <div class="document-list mt-4">
     {% assign notes = site.data.board_notes | sort: "date" | reverse %}
-    {% for note in notes limit: 5 %}<article><div class="doc-icon">{{ note.format | default: "PDF" }}</div><div><h3 class="h5">{{ note.title }}</h3><p>{{ note.date | date: "%B %-d, %Y" }}</p></div><a class="btn btn-outline-club" href="{{ note.document | relative_url }}" download>Download</a></article>{% endfor %}
+    {% for note in notes limit: 5 %}<article><a class="doc-icon" href="{{ note.document | relative_url }}" download aria-label="Download {{ note.title }}">{{ note.format | default: "PDF" }}</a><div><h3 class="h5">{{ note.title }}</h3><p>{{ note.date | date: "%B %-d, %Y" }}</p></div></article>{% endfor %}
   </div>
 </div></section>
 
